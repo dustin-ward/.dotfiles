@@ -1,0 +1,10 @@
+theme = Firewatch
+font-family = JetBrainsMono Nerd Font Mono
+font-size = 16
+background-opacity = 0.8
+gtk-titlebar = false
+
+# Copy Paste
+#keybind = performable:ctrl+c=copy_to_clipboard
+#keybind = unconsumed:ctrl+c=copy_to_clipboard
+keybind = ctrl+v=paste_from_clipboard
