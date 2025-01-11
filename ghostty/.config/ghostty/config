@@ -1,4 +1,6 @@
-theme = Firewatch
+#theme = Firewatch
+#theme = lovelace
+theme = SeaShells
 font-family = JetBrainsMono Nerd Font Mono
 font-size = 16
 background-opacity = 0.8
