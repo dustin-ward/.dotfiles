@@ -1,9 +1,7 @@
-#theme = Firewatch
-#theme = lovelace
-theme = SeaShells
-font-family = JetBrainsMono Nerd Font Mono
+theme = seoulbones_light
+font-family = MonacoLigaturized Nerd Font Mono
 font-size = 16
-background-opacity = 0.8
+background-opacity = 0.9
 gtk-titlebar = false
 scrollback-limit = 1000000
 

@@ -67,7 +67,7 @@
     // RIGHT REGION                                                  //
     //////////////////////////////////////////////////////////////////
     "mpris": {
-        "format": "    {dynamic}   {status_icon}",
+        "format": " {dynamic} {status_icon}",
         "interval": 1,
         "dynamic-len": 40,
         "status-icons": {
@@ -79,7 +79,7 @@
         "ignored-players": ["firefox"]
     },
     "cpu": {
-        "format": "\uee9c   {usage}%",
+        "format": "\uee9c {usage}%",
         "tooltip": true
     },
     "temperature": {
@@ -89,7 +89,7 @@
         "format-icons": ["", "", ""]
     },
     "custom/gpu-utilization": {
-        "format": "   {}%",
+        "format": " {}%",
         "return-type": "",
         "interval": 5,
         "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
@@ -101,20 +101,20 @@
         "exec": "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits",
     },
     "memory": {
-        "format": "\uefc5   {}%"
+        "format": "\uefc5 {}%"
     },
     "wireplumber": {
-        "format": "\uf028    {volume}%",
+        "format": "\uf028 {volume}%",
         "on-click": "pavucontrol",
     },
     "clock": {
-        "format": "<span foreground='#25D1DB'>\udb82\udd54   </span>{:%a %d %I:%M %p}",
+        "format": "<span foreground='#CCCCCC'>\udb82\udd54 </span>{:%a %d %I:%M %p}",
         "tooltip-format": "<tt><big>{calendar}</big></tt>",
         "calendar": {
             "format": {
                 "months": "<span color='#FFFFFF'><b>{}</b></span>",
                 "weekdays": "<span color='#FFFFFF'><b>{}</b></span>",
-                "today": "<span color='#25D1DB'><b>{}</b></span>"
+                "today": "<span color='#CCCCCC'><b>{}</b></span>"
             }
         },
         "actions": {
@@ -125,7 +125,7 @@
     "custom/notification": {
         "tooltip": false,
         "format": "",
-        "format": "\uf01c ",
+        "format": "\uf01c",
         "on-click": "swaync-client -t -sw",
         "escape": true
     },
