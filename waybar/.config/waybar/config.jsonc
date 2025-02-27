@@ -16,8 +16,10 @@
     "modules-right": [
         "mpris",
         "cpu",
-        "memory",
         "temperature",
+        "custom/gpu-utilization",
+        "custom/gpu-temperature",
+        "memory",
         "wireplumber",
         "clock",
         "custom/notification",
@@ -29,7 +31,7 @@
     "hyprland/workspaces": {
         "format": "{icon}",
         "format-icons": {
-            "active": "",
+            "active": "",
             "default": "",
             "empty": ""
         },
@@ -65,7 +67,7 @@
     // RIGHT REGION                                                  //
     //////////////////////////////////////////////////////////////////
     "mpris": {
-        "format": "  {dynamic} {status_icon}",
+        "format": "    {dynamic}   {status_icon}",
         "interval": 1,
         "dynamic-len": 40,
         "status-icons": {
@@ -77,11 +79,8 @@
         "ignored-players": ["firefox"]
     },
     "cpu": {
-        "format": " {usage}%",
+        "format": "\uee9c   {usage}%",
         "tooltip": true
-    },
-    "memory": {
-        "format": "\uefc5 {}%"
     },
     "temperature": {
         "thermal-zone": 2,
@@ -89,12 +88,27 @@
         "format": "{icon} {temperatureC}°C",
         "format-icons": ["", "", ""]
     },
+    "custom/gpu-utilization": {
+        "format": "   {}%",
+        "return-type": "",
+        "interval": 5,
+        "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
+    },
+    "custom/gpu-temperature": {
+        "format": " {}°C",
+        "return-type": "",
+        "interval": 5,
+        "exec": "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits",
+    },
+    "memory": {
+        "format": "\uefc5   {}%"
+    },
     "wireplumber": {
-        "format": "\uf028  {volume}%",
+        "format": "\uf028    {volume}%",
         "on-click": "pavucontrol",
     },
     "clock": {
-        "format": "<span foreground='#25D1DB'>  </span>{:%a %d %I:%M %p}",
+        "format": "<span foreground='#25D1DB'>\udb82\udd54   </span>{:%a %d %I:%M %p}",
         "tooltip-format": "<tt><big>{calendar}</big></tt>",
         "calendar": {
             "format": {
@@ -111,7 +125,7 @@
     "custom/notification": {
         "tooltip": false,
         "format": "",
-        "format": "\ueb09",
+        "format": "\uf01c ",
         "on-click": "swaync-client -t -sw",
         "escape": true
     },
