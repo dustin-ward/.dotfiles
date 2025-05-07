@@ -1,3 +1,4 @@
+@import "mocha.css";
 @define-color   BLCK #333333;
 @define-color   GREY #474747;
 @define-color   WHTE #CCCCCC;
@@ -5,16 +6,16 @@
 * {
     font-size: 22px;
     border-radius: 5px;
+    font-family: MonacoLigaturized Nerd Font Mono;
 }
 
 window#waybar {
-    font-family: MonacoLigaturized Nerd Font Mono;
-    background-color: transparent;
-    border-bottom: 0px;
-    color: @BLCK;
+    background-color: #1E1E2E;
+    color: #ffffff;
+    /* border-bottom: 0px; */
     transition-property: background-color;
     transition-duration: .5s;
-    margin-bottom: 0px;
+    /* margin-bottom: 0px; */
 }
 
 window#waybar.hidden {
@@ -25,7 +26,7 @@ window#waybar.empty #window {
     background-color: transparent;
 }
 
-.modules-right {
+/* .modules-right {
     margin: 10px 20px 0 0;
 }
 .modules-center {
@@ -33,12 +34,13 @@ window#waybar.empty #window {
 }
 .modules-left {
     margin: 10px 0 0 20px;
-}
+} */
 
 button {
     /* Use box-shadow instead of border so the text isn't offset */
-    /* box-shadow: inset 0 -3px transparent; */
+    box-shadow: inset 0 -3px transparent;
     border: none;
+    border-radius: 0;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
@@ -48,37 +50,40 @@ button:hover {
     box-shadow: inset 0 -3px #ebdbb2;
 } */
 
-#workspaces {
+/* #workspaces {
     background-color: @BLCK;
-}
+} */
 
 #workspaces button {
-    padding: 2px 10px 4px 10px;
-    background-color: transparent;
-    color: @GREY;
-    border-radius: 0;
+    /* padding: 2px 10px 4px 10px; */
+    padding: 0 5px;
+    border-radius: 5em / 5em;
+    background-color: @surface0;
+    color: @peach;
+    margin: 2px;
+    font-weight: bold;
 }
 
-#workspaces button:first-child {
+/* #workspaces button:first-child {
     border-radius: 5px 0 0 5px;
 }
 
 #workspaces button:last-child {
     border-radius: 0 5px 5px 0;
-}
+} */
 
 /* #workspaces button:hover {
     color: #333333;
 } */
 
-#workspaces button.active {
+/* #workspaces button.active {
     color: @WHTE;
-    /* box-shadow: inset 0 -3px #ffffff; */
-}
+    box-shadow: inset 0 -3px #ffffff;
+} */
 
-#workspaces button.urgent {
+/* #workspaces button.urgent {
     background-color: #b16286;
-}
+} */
 
 #cava,
 #window,
@@ -94,21 +99,22 @@ button:hover {
 #tray,
 #load {
     padding: 0 10px;
-    margin: 0 5px;
-    background-color: @BLCK;
-    color: @WHTE;
+    color: @peach;
+    background-color: @surface0;
+    font-weight: bold;
+    /* margin: 0 5px; */
 }
 
-#custom-notifcation {
+/* #custom-notifcation {
     font-weight: bold;
     padding: 0 0 0 10px;
-}
+} */
 
-#mode {
+/* #mode {
     background-color: @BLCK;
     color: @GREY;
-    /* box-shadow: inset 0 -3px #ffffff; */
-}
+    box-shadow: inset 0 -3px #ffffff;
+} */
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
@@ -120,15 +126,15 @@ button:hover {
     margin-right: 0;
 }
 
-#cava {
-    /* width: 300px; */
+/* #cava {
+    width: 300px;
     padding: 0 5px;
-}
+} */
 
 @keyframes blink {
     to {
-        background-color: @BLCK;
-        color: @WHTE;
+        background-color: #ffffff;
+        color: #000000;
     }
 }
 
